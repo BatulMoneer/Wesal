@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Wesal';
+  circles = new Array(7); // Adjust the number of circles here
+
+  onStart() {
+    // Handle the start button click
+    console.log('User is ready to start!');
+  }
 }

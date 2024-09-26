@@ -1,0 +1,203 @@
+.body {
+  margin: 0;
+  padding: 0;
+
+  //font-family: 'Cairo', sans-serif;
+  font-family: 'El Messiri', sans-serif;
+  //font-family: 'Changa', sans-serif;
+  //font-family: 'Aref Ruqaa', sans-serif;
+  //font-family: 'Markazi Text', sans-serif;
+  background-color: #303030;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.welcome-container {
+
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  z-index: 11;
+}
+
+.title {
+  font-family: 'Almarai', sans-serif;
+  position: relative;
+  font-size: 12rem;
+  z-index: 12;
+  margin-bottom: 100px;
+  animation: fadeIn 2s ease-in;
+}
+
+.subtitle {
+  position: relative;
+  font-size: 1.5em;
+  margin: 0px 20px;
+  z-index: 12;
+  animation: fadeIn 3s ease-in;
+}
+
+.start-button {
+  font-family: El Messiri, sans-serif;
+  position: relative;
+  background-color: #f22779;
+  color: #ffffff;
+  border: none;
+  margin-top: 30px;
+  padding: 15px 50px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 12;
+  animation: fadeIn 3s ease-in, pulse 2s infinite;
+}
+
+.animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Send the circles behind */
+  overflow: hidden;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.7; } /* Ensure max opacity is 0.7 */
+}
+
+/* Unique animations for each circle */
+@keyframes bounceMovement1 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(100px, 50px); }
+  50% { transform: translate(-50px, 100px); }
+  75% { transform: translate(200px, 150px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceMovement2 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(200px, -50px); }
+  50% { transform: translate(-100px, 150px); }
+  75% { transform: translate(100px, 100px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceMovement3 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-100px, 200px); }
+  50% { transform: translate(50px, 100px); }
+  75% { transform: translate(100px, -100px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceMovement4 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50px, 100px); }
+  50% { transform: translate(100px, -50px); }
+  75% { transform: translate(-100px, 200px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceMovement5 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-50px, -150px); }
+  50% { transform: translate(150px, 100px); }
+  75% { transform: translate(100px, 50px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceMovement6 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(100px, 50px); }
+  50% { transform: translate(-150px, 200px); }
+  75% { transform: translate(50px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceMovement7 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-100px, -50px); }
+  50% { transform: translate(150px, 150px); }
+  75% { transform: translate(100px, -100px); }
+  100% { transform: translate(0, 0); }
+}
+
+.circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(131, 176, 177, 0.7); /* Opacity max 0.7 */
+  animation: fadeInOut 8s infinite ease-in-out;
+  z-index: 0; /* Send the circles behind */
+}
+
+.circle:nth-child(1) {
+  animation: bounceMovement1 10s infinite ease-in-out, fadeInOut 15s infinite ease-in-out;
+  top: 10%;
+  left: 10%;
+}
+
+.circle:nth-child(2) {
+  animation: bounceMovement2 12s infinite ease-in-out, fadeInOut 8s infinite ease-in-out;
+  top: 20%;
+  left: 30%;
+}
+
+.circle:nth-child(3) {
+  animation: bounceMovement3 8s infinite ease-in-out, fadeInOut 6s infinite ease-in-out;
+  top: 30%;
+  left: 50%;
+}
+
+.circle:nth-child(4) {
+  animation: bounceMovement4 9s infinite ease-in-out, fadeInOut 4s infinite ease-in-out;
+  top: 40%;
+  left: 70%;
+}
+
+.circle:nth-child(5) {
+  animation: bounceMovement5 11s infinite ease-in-out, fadeInOut 10s infinite ease-in-out;
+  top: 50%;
+  left: 20%;
+}
+
+.circle:nth-child(6) {
+  animation: bounceMovement6 13s infinite ease-in-out, fadeInOut 6s infinite ease-in-out;
+  top: 60%;
+  left: 40%;
+}
+
+.circle:nth-child(7) {
+  animation: bounceMovement7 15s infinite ease-in-out, fadeInOut 14s infinite ease-in-out;
+  top: 10%;
+  left: 60%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 500px) {
+  .title{
+    font-size: 7rem;
+  }
+}
